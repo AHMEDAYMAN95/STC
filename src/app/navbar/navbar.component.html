@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #430078;">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" [routerLink]="['']">
+                <img src="../../assets/images/trans.png" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top custom-imge-nav">
+                Store
+            </a>
+            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0" style="font-size: larger;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" [routerLink]="['']">{{ "HOME" | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/stc-product']">{{ "PRODUCTS" | translate }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/stc-categories']">{{ "CATEGORIES" | translate }}</a>
+                </li>
+            </ul>
+            <div class="example-row">
+                <div class="example-row" style="width: max-content;
+                    margin: 1rem;">
+                    <span class="form-inline">
+                        <select class="control" #selectedLang (change)="changeCurrentLanguag(selectedLang.value)">
+                            <option *ngFor="let language of translate.getLangs()" [value]="language"
+                                [selected]="language === translate.currentLang">
+                                {{ language | translate }}
+                            </option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <form class="d-flex" role="search">
+                <button class="btn-hover-red color-11" (click)="logOut()">
+                    {{ "LOG_OUT" | translate}} <i class="fa-solid fa-power-off"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>

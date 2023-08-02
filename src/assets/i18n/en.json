@@ -1,0 +1,42 @@
+{
+  "switch-lang": "English",
+  "direction": "ltr",
+
+  "HOME": "Home",
+  "LOGIN": "Login",
+  "LOG_OUT": "log Out",
+  "USER_NAME": "Username",
+  "PASSWORD": "Password",
+  "ERROR_MESSAGE": "username or password are not correct",
+
+  "PRODUCTS": "Products",
+  "CATEGORIES": "Categories",
+
+  "WELCOME_CAT": "Let's go. Further",
+  "WELCOME_CAT_2": "Reach a world of more",
+  "ADD2CART": "Add to cart",
+
+  "DIRECT": "Direct internet wherever you are",
+  "CALL": "Call 900",
+  "IPHONE": "The iPhone experience",
+  "IPHONE2": "Designed to connect with everything Apple",
+  "NEW_IN_STORE": "New in Store",
+
+  "FILTER": "Filter",
+  "NO": "No",
+  "TITLE": "Title",
+  "CATEGORY_PRO": "Category",
+  "PRICE": "Price",
+  "ACTION": "Actions",
+  "EX": "Ex. Title",
+
+  "SAVE": "Save",
+  "CANCEL": "Cancel",
+
+  "COUNT": "Count",
+  "DESCRIPTION": "Description",
+  "IMAGE": "Image",
+  "CATEGORY": "Category",
+  "EDIT": "Edit",
+  "DELETE": "Delete"
+}

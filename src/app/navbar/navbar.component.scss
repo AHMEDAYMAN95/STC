@@ -1,0 +1,119 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.custom-imge-nav {
+  width: auto;
+  //   height: 1.5em;
+}
+
+.navbar-brand {
+  color: #c8b3d8;
+}
+
+.nav-link {
+  color: #c8b3d8;
+}
+
+.navbar-nav .nav-link.active {
+  color: #c8b3d8;
+}
+
+.btn-hover-red {
+  width: 8rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  height: 37px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover-red:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover-red:focus {
+  outline: none;
+}
+
+.btn-hover-red.color-11 {
+  background-image: linear-gradient(
+    to right,
+    #eb3941,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+.btn-hover-lang {
+  width: 2rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  height: 30px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 20px;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.btn-hover-lang:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover-lang:focus {
+  outline: none;
+}
+
+.btn-hover-lang.color-lang {
+  background-image: linear-gradient(
+    to right,
+    #9710ff,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+.navbar {
+  background-color: rebeccapurple;
+}
+
+.control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #8900b3;
+  background-color: #fff;
+  background-clip: padding-box;
+  /* border: 1px solid #ced4da; */
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0.45rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}

@@ -1,0 +1,48 @@
+<div class="image">
+    <div class="example-container">
+        <div class="example-row" style="width: max-content;
+        margin: 1rem;">
+            <span class="form-inline">
+                <select class="form-control" #selectedLang (change)="changeCurrentLanguag(selectedLang.value)">
+                    <option *ngFor="let language of translate.getLangs()" [value]="language"
+                        [selected]="language === translate.currentLang">
+                        {{ language }}
+                    </option>
+                </select>
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top: 8rem;">
+            <div class="col-md-6 col-sm-8 col-xs-12">
+                <div class="text-center login-logo" style="width: -webkit-fill-available">
+                    <img src="./../../assets/images/7010.SR.D-9f4e531b.png" />
+                </div>
+                <br>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-top: 2rem;">
+                    <div class="form-group">
+                        <label for="username">{{ "USER_NAME" | translate }}</label>
+                        <input nbInput type="text" id="username" formControlName="username" [(ngModel)]="user.userName"
+                            class="form-control" placeholder='{{ "USER_NAME" | translate }}' required
+                            style="margin-top: 0.3rem" />
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="password">{{ "PASSWORD" | translate }}</label>
+                        <input nbInput type="password" id="password" formControlName="password"
+                            [(ngModel)]="user.password" class="form-control" placeholder='{{ "PASSWORD" | translate }}'
+                            required style="margin-top: 0.3rem" />
+                    </div>
+                    <div class="form-group text-center" style="margin-top: 44px">
+                        <button class="btn btn-stc" style="width: 100%;" id="login">
+                            {{ "LOGIN" | translate }}
+                        </button>
+                    </div>
+                    <br>
+                    <div class="alert alert-danger" role="alert" *ngIf="showError">{{ "ERROR_MESSAGE" | translate
+                        }}</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
