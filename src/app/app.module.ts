@@ -7,28 +7,28 @@ import { MaterialModule } from './Common/material.module';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { LoginComponent } from './component/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductComponent } from './component/product/product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
-import { CategoriesComponent } from './component/categories/categories.component';
 import { HomeComponent } from './component/home/home.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { CategoriesModule } from './component/categories/categories.module';
+import { ProductModule } from './component/product/product.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LoginComponent,
-    ProductComponent,
     NotFoundComponent,
-    CategoriesComponent,
     HomeComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
+    CategoriesModule,
+    ProductModule,
     BrowserModule,
     AppRoutingModule,
     MaterialModule,

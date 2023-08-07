@@ -3,9 +3,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" [routerLink]="['/stc-home']" style="margin-left: 1rem;">
-        <img src="../../assets/images/trans.png" alt="Logo" width="30" height="24"
-            class="d-inline-block align-text-top custom-imge-nav">
-        Store
+        <img src="../../assets/images/psEdit.png" alt="Logo" class="d-inline-block align-text-top custom-imge-nav">
     </a>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav" style="font-size: larger;">
@@ -13,10 +11,10 @@
                 <a class="nav-link active" aria-current="page" [routerLink]="['/stc-home']">{{ "HOME" | translate }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/stc-product']">{{ "PRODUCTS" | translate }}</a>
+                <a class="nav-link" [routerLink]="['/stc-product/product']">{{ "PRODUCTS" | translate }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/stc-categories']">{{ "CATEGORIES" | translate }}</a>
+                <a class="nav-link" [routerLink]="['/stc-categories/categories']">{{ "CATEGORIES" | translate }}</a>
             </li>
         </ul>
     </div>
