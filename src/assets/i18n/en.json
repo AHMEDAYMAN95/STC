@@ -7,7 +7,7 @@
   "LOG_OUT": "log Out",
   "USER_NAME": "Username",
   "PASSWORD": "Password",
-  "ERROR_MESSAGE": "username or password are not correct",
+  "errorMessage": "username or password are not correct",
 
   "PRODUCTS": "Products",
   "CATEGORIES": "Categories",

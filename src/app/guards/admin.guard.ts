@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ActivatedRoute, CanActivate, Router } from "@angular/router";
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from "@angular/router";
 import { Observable, of } from 'rxjs';
 
 
@@ -7,16 +7,17 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class AdminGuard implements CanActivate {
-  constructor(private router: Router, private route: ActivatedRoute) { }
 
-  canActivate(): Observable<boolean> {
-    if (localStorage.getItem('role') === 'admin') {
-      return of(true);
-    }
-    else {
-      alert('You didnot have an primsiion to access this page');
-      return of(false);
-    }
+  constructor(private router: Router) { }
 
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    if (localStorage.getItem('username') === 'admin') {
+      // logged in so return true
+      return true;
+    }
+    // not logged in so redirect to login page with the return url
+    alert('You didnot have an primsion to access this page');
+    return false;
   }
+
 }

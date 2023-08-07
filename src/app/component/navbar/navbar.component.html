@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #430078;">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#collapsibleNavbar">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" [routerLink]="['']" style="margin-left: 1rem;">
+    <a class="navbar-brand" [routerLink]="['/stc-home']" style="margin-left: 1rem;">
         <img src="../../assets/images/trans.png" alt="Logo" width="30" height="24"
             class="d-inline-block align-text-top custom-imge-nav">
         Store
@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav" style="font-size: larger;">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" [routerLink]="['']">{{ "HOME" | translate }}</a>
+                <a class="nav-link active" aria-current="page" [routerLink]="['/stc-home']">{{ "HOME" | translate }}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/stc-product']">{{ "PRODUCTS" | translate }}</a>

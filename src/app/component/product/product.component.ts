@@ -2,10 +2,10 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { SharedService } from '../services/shared.service';
-import { ProductData } from 'src/_models/userModel';
+import { SharedService } from '../../services/shared.service';
 import { TranslateService } from '@ngx-translate/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ProductData } from 'src/app/models/userModel';
 
 @Component({
   selector: 'stc-product',
