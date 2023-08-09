@@ -3,7 +3,7 @@
         <div class="example-row" style="width: max-content;
         margin: 1rem;">
             <span class="form-inline">
-                <select class="form-control" #selectedLang (change)="changeCurrentLanguag(selectedLang.value)">
+                <select class="form-control" #selectedLang (change)="changeCurrentLanguage(selectedLang.value)">
                     <option *ngFor="let language of translate.getLangs()" [value]="language"
                         [selected]="language === translate.currentLang">
                         {{ language }}

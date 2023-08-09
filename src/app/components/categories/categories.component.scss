@@ -30,3 +30,15 @@
     height: 6.5rem;
   }
 }
+
+.btn-outline-dark {
+  --bs-btn-color: #4f008c;
+  --bs-btn-border-color: #4f008c;
+  --bs-btn-hover-bg: #4f008c;
+  --bs-btn-hover-border-color: #4f008c;
+  --bs-btn-focus-shadow-rgb: 33, 37, 41;
+  --bs-btn-active-bg: #4f008c;
+  --bs-btn-active-border-color: #4f008c;
+  --bs-btn-disabled-color: #4f008c;
+  --bs-btn-disabled-border-color: #4f008c;
+}

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +44,7 @@ import { ProductModule } from './components/product/product.module';
       }
     }),
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClientModule, Title],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

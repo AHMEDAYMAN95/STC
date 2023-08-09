@@ -6,6 +6,7 @@ import { SharedService } from '../../services/shared.service';
 import { TranslateService } from '@ngx-translate/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductData } from 'src/app/models/userModel';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'stc-product',
@@ -14,6 +15,7 @@ import { ProductData } from 'src/app/models/userModel';
 })
 export class ProductComponent implements OnInit {
 
+  title = 'STC Store | Product';
   productForm: FormGroup;
   allDataProducts: ProductData[] = [];
   categories = ["men's clothing", "jewelery", "electronics", "women's clothing",];
@@ -25,7 +27,7 @@ export class ProductComponent implements OnInit {
 
   modeEdit = false;
 
-  constructor(private formBuilder: FormBuilder, private sharedService: SharedService, public translate: TranslateService) {
+  constructor(private formBuilder: FormBuilder, private sharedService: SharedService, public translate: TranslateService, private titleService: Title) {
   }
 
   ngOnInit(): void {
@@ -38,8 +40,9 @@ export class ProductComponent implements OnInit {
       count: ['', Validators.required],
       image: ['', Validators.required],
       description: ['', Validators.required]
-    })
-  }
+    });
+    this.titleService.setTitle(this.title);
+ }
 
   getAllProduct() {
     this.sharedService.get('https://fakestoreapi.com/products').subscribe(dataProduct => {

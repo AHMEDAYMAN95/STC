@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/models/userModel';
@@ -12,20 +13,21 @@ import { User } from 'src/app/models/userModel';
 })
 export class LoginComponent implements OnInit {
 
+  title = 'STC Store | Login';
   user: User = new User();
   loginForm: FormGroup;
   showError: boolean = false;
   message: string;
   submitted = false;
-  currentLang: any;
+  currentLanguage: any;
   errorMessage: string;
-  buttonLabel: string;
   roles = [
     { username: 'user', password: 'user', },
     { username: 'admin', password: 'admin' },
   ];
 
-  constructor(private formBuilder: FormBuilder, private rout: Router, public translate: TranslateService) {
+  constructor(private formBuilder: FormBuilder, private rout: Router, public translate: TranslateService, private titleService: Title) {
+    this.titleService.setTitle(this.title);
     translate.addLangs(['en', 'ar']);
     translate.setDefaultLang('en');
   }
@@ -35,11 +37,11 @@ export class LoginComponent implements OnInit {
       username: ['', Validators.required],
       password: ['', Validators.required]
     });
-    this.currentLang = localStorage.getItem('currentLang');
+    this.currentLanguage = localStorage.getItem('currentLanguage');
   }
 
-  changeCurrentLanguag(lang) {
-    this.translate.use(lang);
+  changeCurrentLanguage(language) {
+    this.translate.use(language);
   }
 
   onSubmit() {
