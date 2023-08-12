@@ -1,0 +1,23 @@
+.product-card {
+  height: 28em;
+
+  &__img {
+    width: 70%;
+    height: 50%;
+  }
+
+  &__content {
+    padding: 10px;
+
+    &__orange {
+      color: rgb(255, 143, 32);
+    }
+  }
+
+  @media (max-width: 567px) {
+    &__img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}

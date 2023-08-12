@@ -3,13 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
-import { AdminGuard } from './guards/admin.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent, },
   {
     path: 'stc-product', loadChildren: () => import('./components/product/product.module')
-      .then(m => m.ProductModule), canActivate: [AdminGuard]
+      .then(m => m.ProductModule)
   },
   {
     path: 'stc-categories', loadChildren: () => import('./components/categories/categories.module')

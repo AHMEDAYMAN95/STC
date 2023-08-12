@@ -42,3 +42,23 @@
   --bs-btn-disabled-color: #4f008c;
   --bs-btn-disabled-border-color: #4f008c;
 }
+
+.name {
+  width: 100%;
+  color: #7f32bb;
+  height: 2em;
+  line-height: 1em;
+  font-size: 20px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  margin-bottom: 12px;
+  cursor: pointer;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.name:hover {
+  overflow: visible;
+  white-space: normal;
+  height: auto; /* just added this line */
+}

@@ -1,0 +1,54 @@
+<div class="row" style="margin: 30px;">
+  <form [formGroup]="productForm">
+    <div class="form-group row">
+      <div class="col-md-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Title</mat-label>
+          <input matInput placeholder="Title" formControlName="title" />
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Category</mat-label>
+          <mat-select placeholder="Product Category" formControlName="category">
+            <mat-option *ngFor="let category of categories" [value]="category">{{
+              category
+              }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Price</mat-label>
+          <input matInput type="number" placeholder="Price" formControlName="price" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8">
+        <mat-form-field appearance="outline" style="width: 28.5rem;">
+          <mat-label>Product Description</mat-label>
+          <textarea matInput placeholder="Description" rows="2" formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Product Image URl</mat-label>
+          <input matInput placeholder="Image URl" formControlName="image" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row justify-content-evenly">
+      <div class="col-auto">
+        <button class="col-auto" mat-raised-button color="warn" style="background-color: seagreen;"
+          (click)="onSaveProduct()">{{ productAddEditData ? "Update" : "SAVE" | translate }}</button>
+      </div>
+      <div class="col-auto">
+        <button class="col-auto" mat-raised-button color="warn" style="background-color: orange;">{{
+          "CANCEL" | translate }}</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -19,28 +19,27 @@
                     <img src="./../../assets/images/7010.SR.D-9f4e531b.png" />
                 </div>
                 <br>
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-top: 2rem;">
+                <form (ngSubmit)="onSubmit()" #userForm="ngForm" style="margin-top: 2rem;">
                     <div class="form-group">
                         <label for="username">{{ "USER_NAME" | translate }}</label>
-                        <input nbInput type="text" id="username" formControlName="username" [(ngModel)]="user.userName"
-                            class="form-control" placeholder='{{ "USER_NAME" | translate }}' required
-                            style="margin-top: 0.3rem" />
+                        <input matInput name="name" ngModel [(ngModel)]="user.userName" class="form-control"
+                            placeholder='{{ "USER_NAME" | translate }}' style="margin-top: 0.3rem" required />
                     </div>
                     <br>
                     <div class="form-group">
                         <label for="password">{{ "PASSWORD" | translate }}</label>
-                        <input nbInput type="password" id="password" formControlName="password"
-                            [(ngModel)]="user.password" class="form-control" placeholder='{{ "PASSWORD" | translate }}'
-                            required style="margin-top: 0.3rem" />
+                        <input matInput type="password" name="password" ngModel [(ngModel)]="user.password"
+                            class="form-control" placeholder='{{ "PASSWORD" | translate }}' style="margin-top: 0.3rem"
+                            required />
                     </div>
                     <div class="form-group text-center" style="margin-top: 44px">
-                        <button class="btn btn-stc" style="width: 100%;" id="login">
+                        <button [disabled]="userForm['invalid']" class="btn btn-stc" style="width: 100%;" id="login">
                             {{ "LOGIN" | translate }}
                         </button>
                     </div>
                     <br>
-                    <div class="alert alert-danger" role="alert" *ngIf="showError">{{ "errorMessage" | translate
-                        }}</div>
+                    <!-- <div class="alert alert-danger" role="alert" *ngIf="showError">{{ "errorMessage" | translate
+                        }}</div> -->
                 </form>
             </div>
         </div>

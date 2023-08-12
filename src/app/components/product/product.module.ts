@@ -5,14 +5,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ProductComponent } from './product.component';
 import { ProductRoutingModule } from './product-routing.module';
 import { MaterialModule } from 'src/app/Common/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ProductComponent } from './products/products.component';
+import { ProductAddEditDialogComponent } from './product-add-edit-dialog/product-add-edit-dialog.component';
+import { ProductDeleteDialogComponent } from './product-delete-dialog/product-delete-dialog.component';
 
 @NgModule({
-  declarations: [ProductComponent],
+  declarations: [ProductComponent, ProductAddEditDialogComponent, ProductDeleteDialogComponent],
   imports: [
     CommonModule,
     ProductRoutingModule,

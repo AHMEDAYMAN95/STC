@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './Common/material.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
@@ -32,6 +32,7 @@ import { ProductModule } from './components/product/product.module';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,

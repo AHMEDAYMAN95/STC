@@ -1,6 +1,8 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { Product } from "../models/productModel";
+import { environment } from "src/enviroments/enviroment";
 
 
 @Injectable({
@@ -11,24 +13,46 @@ export class SharedService {
 
     constructor(private http: HttpClient) { }
 
-    //get all Data
-    get(url): Observable<any> {
-        return this.http.get<any>(url);
+    getProducts(): Observable<Product[]> {
+        return this.http.get<Product[]>(`${environment.apiBaseUrl}/products`);
     }
 
-    //post Data
-    post(url, data): Observable<any> {
-        return this.http.post<any>(url, data);
+    getProductsByCategory(categoryName: string): Observable<Product[]> {
+        return this.http.get<Product[]>(
+            `${environment.apiBaseUrl}/products/category/${categoryName}`
+        );
     }
 
-    //put Data
-    put(url, data): Observable<any> {
-        return this.http.put<any>(url, data);
+    getProductById(productId: number): Observable<Product> {
+        return this.http.get<Product>(
+            `${environment.apiBaseUrl}/products/${productId}`
+        );
     }
 
-    //delete Data
-    delete(url): Observable<any> {
-        return this.http.delete<any>(url);
+    getCategories(): Observable<string[]> {
+        return this.http.get<string[]>(
+            `${environment.apiBaseUrl}/products/categories`
+        );
+    }
+
+    addProduct(product: Product): Observable<Product> {
+        return this.http.post<Product>(
+            `${environment.apiBaseUrl}/products`,
+            product
+        );
+    }
+
+    updateProduct(product: Product): Observable<Product> {
+        return this.http.put<Product>(
+            `${environment.apiBaseUrl}/products/${product.id}`,
+            product
+        );
+    }
+
+    deleteProduct(productId: number): Observable<Product> {
+        return this.http.delete<Product>(
+            `https://fakestoreapi.com/products/${productId}`
+        );
     }
 
 }

@@ -1,0 +1,29 @@
+<mat-card
+  class="product-card align-items-center justify-content-center w-100 mb-4"
+  [matTooltip]="product!.title"
+  matTooltipPosition="above"
+>
+  <img
+    class="product-card__img"
+    mat-card-image
+    [src]="product?.image"
+    [alt]="product?.title"
+  />
+  <mat-card-content class="product-card__content">
+    <p class="doted-text-overflow">{{ product?.title }}</p>
+    <p class="fw-bold product-card__content__orange">
+      {{ product?.price | currency }}
+    </p>
+    <div class="icon-list">
+      <mat-icon
+        *ngFor="let item of [].constructor(roundRate((product?.rating)!.rate))"
+        class="product-card__content__orange"
+        >star</mat-icon
+      >
+      <span>({{ (product?.rating)!.count }})</span>
+    </div>
+    <p>
+      {{ "Category: " + product?.category }}
+    </p>
+  </mat-card-content>
+</mat-card>
